@@ -11,6 +11,7 @@ header{
     align-items: center;
     padding: 0 30px;
     background: transparent;
+    transition: all ease 0.4s;
 }
 
 header.black{
@@ -27,9 +28,22 @@ header.black{
 
 .header--user{
     height: 35px;
+    
 }
 
 .header--user img{
     height: 100%;
     border-radius: 3px;
+}
+
+footer{
+    margin: 50px 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.footer--link{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }

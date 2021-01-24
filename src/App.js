@@ -15,6 +15,7 @@ const App =()=>{
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [blackHeader, setBlackHeader] = useState(false);
 
   const loadAll = async ()=>{
     let list = await Tmdb.getHomeList();
@@ -43,10 +44,29 @@ const App =()=>{
 
     loadAll();
   },[]);
-  
+
+  useEffect(()=>{
+    const scrollListener = ()=>{
+      if(window.scrollY > 10){
+        setBlackHeader(true);
+      } else{
+        setBlackHeader(false);
+      }
+    }
+
+    window.addEventListener('scroll', scrollListener);
+
+    return ()=>{
+      window.removeEventListener('scroll', scrollListener);
+
+    }
+  },[])
+    
   return(
+    
     <div className="page">
-      <Header/>
+      
+      <Header black={blackHeader}/>
       {loading &&
         <div className="spinner">
           <Spinner
@@ -71,6 +91,14 @@ const App =()=>{
         ))}
       </section>
       }
+      
+      <footer>
+        Feito com <span role="img" aria-label="coração">❤️</span> por 
+        
+        <a className="footer--link" href="https://www.linkedin.com/in/marcos-paulo-amorim-b08228160/"  target="_blank"> MStark</a><br/>
+        Direitos de imagem pertencem a Netflix <br/>
+        Informações base da API do Themoviedb.org 
+      </footer>
       
     </div>
   )
