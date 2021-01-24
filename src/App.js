@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
-import MovieRow from './components/MovieRow/MovieRow';
-import FeaturedMovie from './components/FeaturedMovie/FeaturedMovie';
+import MovieRow from './components/MovieRow/';
+import FeaturedMovie from './components/FeaturedMovie/';
+import Header from './components/Header/';
 
 import Tmdb from './Tmbd';
 
@@ -45,6 +46,7 @@ const App =()=>{
   
   return(
     <div className="page">
+      <Header/>
       {loading &&
         <div className="spinner">
           <Spinner
