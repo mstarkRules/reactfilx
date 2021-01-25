@@ -92,13 +92,16 @@ const App =()=>{
       </section>
       }
       
-      <footer>
+      {!loading && 
+        <footer>
         Feito com <span role="img" aria-label="coração">❤️</span> por 
         
         <a className="footer--link" href="https://www.linkedin.com/in/marcos-paulo-amorim-b08228160/"  target="_blank"> MStark</a><br/>
         Direitos de imagem pertencem a Netflix <br/>
         Informações base da API do Themoviedb.org 
       </footer>
+      }
+      
       
     </div>
   )
