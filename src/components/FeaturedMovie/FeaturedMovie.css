@@ -53,10 +53,8 @@
     font-size: 20px;
     color:#999;
     max-width: 40%;
-    display: -webkit-box;
-    -webkit-line-clamp: 12;
-    -webkit-box-orient: vertical; 
-    overflow: hidden;
+    
+    
 
 }
 
@@ -102,5 +100,26 @@
     .featured{
         height: 90vh;
     }
+    .featured--name{
+        font-size: 40px;
+    }
+    
+    .featured--info{
+        font-size: 16px;
+    }
+    
+    .featured--description{
+        font-size: 16px;
+        max-width: 100%;
+        margin-right: 30px;
+    }
+    .featured--watchbutton,
+    .featured--mylistbutton{
+        font-size: 16px;
+    }
+    .featured--genres{
+        font-size: 15px;
+    }
 }
+
 
