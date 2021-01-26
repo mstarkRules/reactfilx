@@ -53,9 +53,13 @@
     font-size: 20px;
     color:#999;
     max-width: 40%;
-    
-    
+}
 
+.featured--descriptionMore{
+    font-weight: bold;
+    color:#eee;
+    cursor: pointer;
+    display: inline;
 }
 
 .featured--buttons{

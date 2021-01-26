@@ -1,0 +1,25 @@
+
+.modal--modal{
+    
+}
+
+.modal--container{
+    
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    max-width: 40%;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: linear-gradient(to left, #111 1%, transparent 70%);
+
+}
+
+.modal--description{
+    max-width: 50%;
+    margin-bottom: 10px;
+    
+}
